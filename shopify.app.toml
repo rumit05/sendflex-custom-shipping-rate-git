@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "353445c8b5eefa4baac74e7bf0539e9d"
+name = "sendflex-custom-shipping-rate"
+handle = "sendflex-custom-shipping-rate"
+application_url = "https://cats-reward-nov-rachel.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "xovak-development.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_shipping"
+
+[auth]
+redirect_urls = [
+  "https://cats-reward-nov-rachel.trycloudflare.com/auth/callback",
+  "https://cats-reward-nov-rachel.trycloudflare.com/auth/shopify/callback",
+  "https://cats-reward-nov-rachel.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
